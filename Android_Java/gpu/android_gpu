@@ -3,4 +3,9 @@
 	PowerVR(德州仪器)、
 	Tegra(英伟达)、
 	mali(猎户座)，mali又分2种一个是2013以前的Newer Mali ，另一个是2013年以后的Older mali
+
 	
+http://www.gsmarena.com/samsung_galaxy_j1_ace-7673.php
+http://www.gsmarena.com/search.php3?
+
+//	private String jsonString ={"beauty":["HUAWEI P7-L07","HUAWEI P6-U06"],"record":["HUAWEI P6-U06"],"hignQuality":["vivo X6S A","MEIZU MX5","SM-N9200","MI 4LTE","EVA-AL00","PRO 5","SM-A7000"],"multiLive":["Redmi 3","C6603","SM-N9200","R7c","PLK-TL01H","SM-A7000","HUAWEI P6-U06","Redmi Note 2","MI PAD 2","m2 note","MI 4LTE","vivo X6S A","MI 3","ZTE B2015","HUAWEI P7-L07","HUAWEI C8816","HTC E9w","M351","HUAWEI TAG-AL00","MX5","MX4","EVA-AL00","L36h","SM-G9250","MI 5","SCH-N719","MI 2S"]}

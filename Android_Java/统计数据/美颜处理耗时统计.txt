@@ -1,0 +1,317 @@
+01-04 14:49:35.961: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65439661861
+01-04 14:49:35.961: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:36.031: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65439725261
+01-04 14:49:36.031: D/MethodCostUtils(19226): end 耗时：64
+01-04 14:49:36.101: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65439794515
+01-04 14:49:36.101: D/MethodCostUtils(19226): end 耗时：72
+01-04 14:49:36.161: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65439857116
+01-04 14:49:36.161: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:36.221: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65439918284
+01-04 14:49:36.221: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:36.281: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65439979499
+01-04 14:49:36.281: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:36.341: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65440038429
+01-04 14:49:36.341: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:36.401: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65440104006
+01-04 14:49:36.401: D/MethodCostUtils(19226): end 耗时：64
+01-04 14:49:36.451: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65440156713
+01-04 14:49:36.461: D/MethodCostUtils(19226): end 耗时：52
+01-04 14:49:36.511: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65440208716
+01-04 14:49:36.511: D/MethodCostUtils(19226): end 耗时：56
+01-04 14:49:36.571: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65440267802
+01-04 14:49:36.571: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:36.631: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65440327952
+01-04 14:49:36.631: D/MethodCostUtils(19226): end 耗时：55
+01-04 14:49:36.681: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65440381488
+01-04 14:49:36.681: D/MethodCostUtils(19226): end 耗时：57
+01-04 14:49:36.751: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65440450409
+01-04 14:49:36.751: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:36.811: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65440512247
+01-04 14:49:36.811: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:36.871: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65440571488
+01-04 14:49:36.871: D/MethodCostUtils(19226): end 耗时：57
+01-04 14:49:36.931: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65440631679
+01-04 14:49:36.931: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:37.001: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65440691190
+01-04 14:49:37.001: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:37.061: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65440757480
+01-04 14:49:37.061: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:37.121: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65440822827
+01-04 14:49:37.121: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:37.181: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65440877115
+01-04 14:49:37.181: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:37.241: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65440938181
+01-04 14:49:37.241: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:37.301: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65440996091
+01-04 14:49:37.301: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:37.361: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65441058222
+01-04 14:49:37.361: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:37.421: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65441120646
+01-04 14:49:37.421: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:37.481: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65441174364
+01-04 14:49:37.481: D/MethodCostUtils(19226): end 耗时：56
+01-04 14:49:37.541: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65441235459
+01-04 14:49:37.541: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:37.601: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65441296198
+01-04 14:49:37.601: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:37.651: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65441353110
+01-04 14:49:37.651: D/MethodCostUtils(19226): end 耗时：56
+01-04 14:49:37.721: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65441415591
+01-04 14:49:37.721: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:37.781: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65441476258
+01-04 14:49:37.781: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:37.831: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65441534548
+01-04 14:49:37.831: D/MethodCostUtils(19226): end 耗时：55
+01-04 14:49:37.901: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65441595248
+01-04 14:49:37.901: D/MethodCostUtils(19226): end 耗时：64
+01-04 14:49:37.971: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65441660412
+01-04 14:49:37.971: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:38.011: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65441713654
+01-04 14:49:38.021: D/MethodCostUtils(19226): end 耗时：55
+01-04 14:49:38.071: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65441772867
+01-04 14:49:38.091: D/dalvikvm(19226): GC_FOR_ALLOC freed 2041K, 22% free 8082K/10328K, paused 19ms, total 19ms
+01-04 14:49:38.101: D/MethodCostUtils(19226): end 耗时：80
+01-04 14:49:38.151: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65441855894
+01-04 14:49:38.151: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:38.221: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65441914196
+01-04 14:49:38.221: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:38.281: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65441976844
+01-04 14:49:38.281: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:38.341: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65442033669
+01-04 14:49:38.341: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:38.401: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65442093981
+01-04 14:49:38.401: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:38.451: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65442152182
+01-04 14:49:38.451: D/MethodCostUtils(19226): end 耗时：56
+01-04 14:49:38.521: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65442213954
+01-04 14:49:38.521: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:38.581: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65442286054
+01-04 14:49:38.581: D/MethodCostUtils(19226): end 耗时：67
+01-04 14:49:38.651: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65442341623
+01-04 14:49:38.651: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:38.701: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65442405910
+01-04 14:49:38.701: D/MethodCostUtils(19226): end 耗时：57
+01-04 14:49:38.771: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65442466664
+01-04 14:49:38.771: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:38.821: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65442521136
+01-04 14:49:38.821: D/MethodCostUtils(19226): end 耗时：55
+01-04 14:49:38.891: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65442585930
+01-04 14:49:38.891: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:38.941: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65442645416
+01-04 14:49:38.951: D/MethodCostUtils(19226): end 耗时：57
+01-04 14:49:39.011: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65442708474
+01-04 14:49:39.011: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:39.061: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65442765019
+01-04 14:49:39.071: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:39.121: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65442822896
+01-04 14:49:39.121: D/MethodCostUtils(19226): end 耗时：57
+01-04 14:49:39.181: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65442883320
+01-04 14:49:39.181: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:39.241: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65442942910
+01-04 14:49:39.241: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:39.301: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65443003920
+01-04 14:49:39.301: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:39.361: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65443060644
+01-04 14:49:39.361: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:39.431: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65443135952
+01-04 14:49:39.441: D/MethodCostUtils(19226): end 耗时：72
+01-04 14:49:39.511: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65443207805
+01-04 14:49:39.511: D/MethodCostUtils(19226): end 耗时：69
+01-04 14:49:39.571: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65443265950
+01-04 14:49:39.571: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:39.631: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65443325080
+01-04 14:49:39.631: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:39.691: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65443385032
+01-04 14:49:39.691: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:39.741: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65443443911
+01-04 14:49:39.741: D/MethodCostUtils(19226): end 耗时：51
+01-04 14:49:39.801: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65443504179
+01-04 14:49:39.801: D/MethodCostUtils(19226): end 耗时：66
+01-04 14:49:39.861: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65443560076
+01-04 14:49:39.861: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:39.921: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65443622133
+01-04 14:49:39.921: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:39.991: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65443683664
+01-04 14:49:39.991: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:40.051: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65443746234
+01-04 14:49:40.051: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:40.111: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65443813920
+01-04 14:49:40.121: D/MethodCostUtils(19226): end 耗时：69
+01-04 14:49:40.181: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65443884147
+01-04 14:49:40.191: D/MethodCostUtils(19226): end 耗时：69
+01-04 14:49:40.251: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65443947145
+01-04 14:49:40.251: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:40.311: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65444007397
+01-04 14:49:40.311: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:40.371: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65444060587
+01-04 14:49:40.371: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:40.421: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65444127606
+01-04 14:49:40.431: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:40.491: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65444186206
+01-04 14:49:40.491: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:40.551: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65444246955
+01-04 14:49:40.551: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:40.621: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65444315247
+01-04 14:49:40.621: D/MethodCostUtils(19226): end 耗时：64
+01-04 14:49:40.671: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65444374658
+01-04 14:49:40.681: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:40.731: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65444432912
+01-04 14:49:40.731: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:40.791: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65444496092
+01-04 14:49:40.801: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:40.861: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65444563922
+01-04 14:49:40.871: D/MethodCostUtils(19226): end 耗时：69
+01-04 14:49:40.931: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65444627952
+01-04 14:49:40.931: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:40.991: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65444693820
+01-04 14:49:40.991: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:41.051: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65444753115
+01-04 14:49:41.051: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:41.121: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65444815031
+01-04 14:49:41.121: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:41.171: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65444873360
+01-04 14:49:41.171: D/MethodCostUtils(19226): end 耗时：55
+01-04 14:49:41.241: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65444937472
+01-04 14:49:41.241: D/MethodCostUtils(19226): end 耗时：66
+01-04 14:49:41.301: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65444996498
+01-04 14:49:41.301: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:41.361: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65445060688
+01-04 14:49:41.361: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:41.421: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65445117757
+01-04 14:49:41.421: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:41.481: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65445184528
+01-04 14:49:41.491: D/MethodCostUtils(19226): end 耗时：66
+01-04 14:49:41.551: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65445247723
+01-04 14:49:41.551: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:41.621: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65445313563
+01-04 14:49:41.621: D/MethodCostUtils(19226): end 耗时：68
+01-04 14:49:41.681: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65445378668
+01-04 14:49:41.681: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:41.741: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65445442923
+01-04 14:49:41.741: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:41.801: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65445496221
+01-04 14:49:41.801: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:41.861: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65445561949
+01-04 14:49:41.861: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:41.921: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65445625173
+01-04 14:49:41.921: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:41.991: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65445684783
+01-04 14:49:41.991: D/MethodCostUtils(19226): end 耗时：64
+01-04 14:49:42.051: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65445745956
+01-04 14:49:42.051: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:42.111: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65445809364
+01-04 14:49:42.111: D/MethodCostUtils(19226): end 耗时：56
+01-04 14:49:42.161: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65445861575
+01-04 14:49:42.161: D/MethodCostUtils(19226): end 耗时：54
+01-04 14:49:42.221: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65445927167
+01-04 14:49:42.231: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:42.301: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65445995622
+01-04 14:49:42.301: D/MethodCostUtils(19226): end 耗时：70
+01-04 14:49:42.361: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65446054855
+01-04 14:49:42.361: D/MethodCostUtils(19226): end 耗时：55
+01-04 14:49:42.421: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65446114340
+01-04 14:49:42.421: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:42.481: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65446182447
+01-04 14:49:42.481: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:42.551: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65446247865
+01-04 14:49:42.551: D/MethodCostUtils(19226): end 耗时：64
+01-04 14:49:42.601: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65446304177
+01-04 14:49:42.601: D/MethodCostUtils(19226): end 耗时：55
+01-04 14:49:42.681: D/dalvikvm(19226): GC_FOR_ALLOC freed 2049K, 22% free 8079K/10328K, paused 20ms, total 21ms
+01-04 14:49:42.681: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65446359641
+01-04 14:49:42.681: D/MethodCostUtils(19226): end 耗时：76
+01-04 14:49:42.741: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65446442427
+01-04 14:49:42.741: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:42.801: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65446498216
+01-04 14:49:42.801: D/MethodCostUtils(19226): end 耗时：57
+01-04 14:49:42.851: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65446555009
+01-04 14:49:42.861: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:42.921: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65446616685
+01-04 14:49:42.921: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:42.981: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65446677566
+01-04 14:49:42.981: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:43.041: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65446744152
+01-04 14:49:43.051: D/MethodCostUtils(19226): end 耗时：66
+01-04 14:49:43.111: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65446802847
+01-04 14:49:43.111: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:43.181: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65446876246
+01-04 14:49:43.181: D/MethodCostUtils(19226): end 耗时：77
+01-04 14:49:43.241: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65446943915
+01-04 14:49:43.241: D/MethodCostUtils(19226): end 耗时：59
+01-04 14:49:43.311: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65447007890
+01-04 14:49:43.311: D/MethodCostUtils(19226): end 耗时：65
+01-04 14:49:43.371: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65447064865
+01-04 14:49:43.371: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:43.431: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65447132121
+01-04 14:49:43.431: D/MethodCostUtils(19226): end 耗时：66
+01-04 14:49:43.501: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65447196127
+01-04 14:49:43.501: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:43.571: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65447255873
+01-04 14:49:43.571: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:43.621: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65447314751
+01-04 14:49:43.621: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:43.681: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65447382121
+01-04 14:49:43.681: D/MethodCostUtils(19226): end 耗时：67
+01-04 14:49:43.751: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65447445877
+01-04 14:49:43.751: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:43.811: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65447509936
+01-04 14:49:43.811: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:43.861: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65447561810
+01-04 14:49:43.871: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:43.921: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65447622483
+01-04 14:49:43.921: D/MethodCostUtils(19226): end 耗时：57
+01-04 14:49:43.981: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65447677518
+01-04 14:49:43.981: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:44.041: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65447742805
+01-04 14:49:44.041: D/MethodCostUtils(19226): end 耗时：60
+01-04 14:49:44.111: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65447802818
+01-04 14:49:44.111: D/MethodCostUtils(19226): end 耗时：63
+01-04 14:49:44.161: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65447863933
+01-04 14:49:44.171: D/MethodCostUtils(19226): end 耗时：58
+01-04 14:49:44.221: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65447921739
+01-04 14:49:44.221: D/MethodCostUtils(19226): end 耗时：56
+01-04 14:49:44.281: E/EncodeAndDecode(19226): encode outputBufferIndex= 2  pt:  65447977459
+01-04 14:49:44.281: D/MethodCostUtils(19226): end 耗时：61
+01-04 14:49:44.341: E/EncodeAndDecode(19226): encode outputBufferIndex= 3  pt:  65448042754
+01-04 14:49:44.341: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:44.401: D/dalvikvm(19226): GC_FOR_ALLOC freed 786K, 22% free 8066K/10328K, paused 18ms, total 18ms
+01-04 14:49:44.401: I/dalvikvm-heap(19226): Grow heap (frag case) to 10.183MB for 160024-byte allocation
+01-04 14:49:44.411: E/EncodeAndDecode(19226): encode outputBufferIndex= 0  pt:  65448101585
+01-04 14:49:44.411: D/MethodCostUtils(19226): end 耗时：62
+01-04 14:49:44.441: D/dalvikvm(19226): GC_FOR_ALLOC freed 191K, 23% free 8146K/10488K, paused 31ms, total 32ms
+01-04 14:49:44.451: E/StateManage(19226): RTMP服务器onStop()！！
+01-04 14:49:44.451: E/StateManage(19226): 摄像头onStop()！！
+01-04 14:49:44.461: D/AACStream(19226): Interrupting threads...
+01-04 14:49:44.481: D/TrackUtils(19226): inputSource = 1, format =1, sampleRate = 44100, channels =1,           active =0
+01-04 14:49:44.481: D/TrackUtils(19226): livesLocally  = 0
+01-04 14:49:44.481: D/TrackUtils(19226): USECASE_PCM_RECORDING
+01-04 14:49:44.481: D/TrackUtils(19226): setParameter success for usecase = USECASE_PCM_RECORDING
+01-04 14:49:44.491: E/EncodeAndDecode(19226): encode outputBufferIndex= 1  pt:  65448184071
+01-04 14:49:44.491: D/MethodCostUtils(19226): end 耗时：80
+01-04 14:49:44.491: I/OMXNodeInstance(19226): OMX_FreeBuffer for buffer header 0x63aac600 successful
+01-04 14:49:44.491: I/OMXNodeInstance(19226): OMX_FreeBuffer for buffer header 0x63aac4e8 successful
+01-04 14:49:44.491: I/OMXNodeInstance(19226): OMX_FreeBuffer for buffer header 0x63aac3d0 successful
+01-04 14:49:44.491: I/OMXNodeInstance(19226): OMX_FreeBuffer for buffer header 0x63aac228 successful
+01-04 14:49:44.491: I/OMXNodeInstance(19226): OMX_FreeBuffer for buffer header 0x608e5570 successful
+01-04 14:49:44.491: I/OMXNodeInstance(19226): OMX_FreeBuffer for buffer header 0x608e5470 successful
+01-04 14:49:44.491: I/OMXNodeInstance(19226): OMX_FreeBuffer for buffer header 0x63497178 successful
+01-04 14:49:44.491: I/OMXNodeInstance(19226): OMX_FreeBuffer for buffer header 0x63496fc0 successful
+01-04 14:49:44.491: D/ResourceManager(19226): ResetParameter - useCase =, useCaseFlag = 0, codecFlags = 0
+01-04 14:49:44.521: E/11(19226): insertEvent:insert into event(guid,ea,el,ec,evts,ex,type) values('null','event_rtmp_publish_stop','rtmp','rtmp','1483512584532','',0)
+01-04 14:49:44.521: D/ResourceManager(19226): ResetParameter - useCase =, useCaseFlag = 0, codecFlags = 0
+01-04 14:49:44.551: E/---(19226): ---===---  3
+01-04 14:49:44.551: D/CrashReport(19226): >>> com.seu.magiccamera.activity.CameraActivity onPaused <<<
+01-04 14:49:44.551: D/StateManage(19226): onPause_time
+01-04 14:49:44.551: E/StateManage(19226): 还没调用过摄像头start()或者 onResume(),因此不需要执行onStop()！
+01-04 14:49:44.561: D/SingleInstanceManager(19226): [[makeNewInstance]] class name = com.xiangchao.livestream.utils.CustomThreadPool
+01-04 14:49:44.571: D/SingleInstanceManager(19226): [[makeNewInstance]] Constructor = protected com.xiangchao.livestream.utils.CustomThreadPool() accessible = false
+01-04 14:49:44.571: D/SingleInstanceManager(19226): [[makeNewInstance]] Constructor changed = true
+01-04 14:49:44.571: D/SingleInstanceManager(19226): [[makeNewInstance]] create obj = com.xiangchao.livestream.utils.CustomThreadPool@418b7df0 SingleInstanceBase is true
+01-04 14:49:44.581: E/doPost(19226): doPost:{"os":"android-18","model":"HUAWEI C8816","valuelist":[{"value":"rtmp:\/\/test.ws.push.live.slw117.top\/live","guid":"null","key":"rtmpUrl"},{"value":"655360","guid":"null","key":"bitrate"},{"value":"2","guid":"null","key":"gop"}],"sdkversion":"3.8.60","appid":"com.seu.magiccamera_android","pid":"3834313236313430003V","eventlist":[{"guid":"null","ex":"","evts":"1483512549886","el":"rtmp","ea":"event_rtmp_publish_prepare","ec":"rtmp"},{"guid":"null","ex":"","evts":"1483512560704","el":"rtmp","ea":"event_rtmp_connect_succ","ec":"rtmp"},{"guid":"null","ex":"","evts":"1483512561503","el":"rtmp","ea":"event_rtmp_publish_start","ec":"rtmp"},{"guid":"null","ex":"","evts":"1483512564672","el":"rtmp","ea":"event_rtmp_send_audio_only","ec":"rtmp"},{"guid":"null","ex":"","evts":"1483512584532","el":"rtmp","ea":"event_rtmp_publish_stop","ec":"rtmp"}],"gpu":""}
+01-04 14:49:44.611: D/CrashReport(19226): >>> com.seu.magiccamera.activity.MainActivity onResumed <<<
+01-04 14:49:44.701: E/StateManage(19226): surface   Destroyed
+01-04 14:49:44.701: D/VideoStream(19226): Surface destroyed !
+01-04 14:49:45.061: E/StateManage(19226): 开始回收过RTMP服务器资源！！
+01-04 14:49:45.061: E/StateManage(19226): 开始回收过摄像头和MIC资源了！！
+01-04 14:49:49.731: E/doPost(19226): doPost----------onFail:http request error:recvfrom failed: ECONNRESET (Connection reset by peer)
+01-04 14:49:49.731: E/post-------------(19226): recvfrom failed: ECONNRESET (Connection reset by peer)

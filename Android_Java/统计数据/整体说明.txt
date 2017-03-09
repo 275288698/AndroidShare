@@ -1,0 +1,26 @@
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+推流库总耗时log函数如下：
+
+XCLog.logError("MethodCostUtil", "###java 总耗时："+duration12+" rtmp库 总耗时 "+(tag3-tag1-duration12)+" 推流总耗时: "+(tag3-tag1));
+
+日志log tag：MethodCostUtil
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+推流目前支持三种方式：1.软便（无美颜）2.硬编码（无美颜）3 opengl（有美颜）
+具体各个函数的耗时
+
+日志log tag：MethodCostUtil_function
+
+硬编码
+1.java---旋转裁剪镜像 
+2.java--- 编码 
+
+软编码
+1.java--- 旋转裁剪镜像 
+2.java--- 软编码 数组拷贝
+3.java--- 编码 
+
+opengl
+1.java opengl ---旋转裁剪镜像硬编码
+
+===========================================
