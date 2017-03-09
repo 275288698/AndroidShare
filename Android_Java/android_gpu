@@ -1,0 +1,6 @@
+安卓手机GPU可以分为4种
+	Adreno(高通)、
+	PowerVR(德州仪器)、
+	Tegra(英伟达)、
+	mali(猎户座)，mali又分2种一个是2013以前的Newer Mali ，另一个是2013年以后的Older mali
+	
