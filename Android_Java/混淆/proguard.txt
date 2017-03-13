@@ -1,0 +1,295 @@
+-injars /Users/yiqin/Documents/proguard/pavsdk1.0.1.jar
+-outjars /Users/yiqin/Documents/proguard/pack
+
+-libraryjars android-support-v4.jar
+-libraryjars android.jar
+-libraryjars rt.jar
+
+-dontskipnonpubliclibraryclassmembers
+-dontshrink
+-dontoptimize
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-keepattributes *JavascriptInterface*,Exceptions,InnerClasses,Signature,*Annotation*,SourceFile,LineNumberTable
+-dontpreverify
+-verbose
+-dontnote
+-dontwarn com.google.android.maps.**,android.webkit.WebView,com.umeng.**,com.tencent.weibo.sdk.**,com.facebook.**,twitter4j.**,com.tencent.**,com.sina.**,android.support.v4.**,cn.jpush.**,com.google.gson.jpush.**,com.google.protobuf.jpush.**,info.monitorenter.**,com.android.volley.**,pl.droidsonroids.gif.**
+-ignorewarnings
+
+
+-keep public class * extends android.app.Activity
+
+-keep public class * extends android.app.Application
+
+-keep public class * extends android.app.Service
+
+-keep public class * extends android.content.BroadcastReceiver
+
+-keep public class * extends android.content.ContentProvider
+
+-keep public class * extends android.app.backup.BackupAgentHelper
+
+-keep public class * extends android.preference.Preference
+
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keep public interface  android.content.pm.*
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context,android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context,android.util.AttributeSet,int);
+}
+
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+-keep class * extends android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+-keep class android.app.AppOpsManager
+
+-keep class com.kankan.MediaStastic {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.utils.SingleInstanceBase {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.utils.XCToast {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.log.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.liveplay.LivePlayBuild {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.liveplay.LivePlayConfig {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.liveplay.LivePlaySDK {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.seu.magicfilter.filter.helper.MagicFilterType {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.seu.magicfilter.utils.MagicSDK$* {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.seu.magicfilter.display.MagicDisplay {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.utils.DeviceUtil {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.seu.magicfilter.filter.helper.MagicFilterParam {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.liveplay.LivePlaySDK$* {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.network.NetworkHelper {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.seu.magicfilter.utils.MagicSDK {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.seu.magicfilter.utils.SaveTask {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.seu.magicfilter.utils.SaveTask$* {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.liveplay.stateManage.PlayerStateManage$* {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.liveplay.stateManage.PlayerStateManage {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.player.VideoView$* {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.player.VideoView {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.player. {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.jni.MediaRecorderUtils {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.common.livestream.jni.LivePortalUtils {
+    <fields>;
+    <methods>;
+}
+
+-keep class * extends com.common.livestream.common.util.SingleInstanceBase
+
+-keep class org.apache.http.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.http.impl.nio.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.http.nio.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.http.entity.mime.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.commons.codec.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.commons.codec.binary.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.commons.codec.language.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class org.apache.commons.codec.net.** {
+    <fields>;
+    <methods>;
+}
+
+-keepclassmembers class * {
+    public <init>(org.json.JSONObject);
+}
+
+-keep public class javax.**
+
+-keep class android.support.v4.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.kankan.media.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.pingan.av.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.pingan.avlive.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.pingan.im.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.pingan.media.** {
+    <fields>;
+    <methods>;
+}
+
+-keep class com.android.webrtc.audio.** {
+    <fields>;
+    <methods>;
+}
+
+-keep,allowshrinking class * extends android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# Also keep - Enumerations. Keep the special static methods that are required in
+# enumeration classes.
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# Keep names - Native method names. Keep all native class/method names.
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+-assumenosideeffects class org.apache.log4j.** {
+    <fields>;
+    <methods>;
+}
+
+-assumenosideeffects class de.mindpipe.android.logging.log4j.LogConfigurator {
+    <fields>;
+    <methods>;
+}
+
+-assumenosideeffects class android.util.Log {
+    public <fields>;
+    public <methods>;
+}
+
+-assumenosideeffects class com.common.livestream.common.log.XCLog {
+    public static void log(...);
+    public static void logError(...);
+}

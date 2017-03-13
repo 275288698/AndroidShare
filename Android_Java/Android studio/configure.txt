@@ -1,0 +1,5 @@
+http://www.cnblogs.com/kelina2mark/p/6132994.html
+
+你可以直接点击IDE的 Plugins -> Browse Repositories -> 输入 JRebel for Android 来搜索和安装插件。
+
+在Android Studio中，通过以下路径 Preferences → Plugins → Browse repositories ，搜索“freeline”，并安装。
