@@ -1,0 +1,7 @@
+PC Falsh Rtmp flv websocket
+
+android tencent|wechat  native rtmp hls websocket
+
+android browser hls flv websocket hash
+
+ios  hls websocket
