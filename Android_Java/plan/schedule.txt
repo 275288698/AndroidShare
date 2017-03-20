@@ -1,0 +1,25 @@
+1. socket linux . 
+	|-- rtmp
+	|-- unix socket 编程
+	
+2. opengl：surface yuv glsurface 渲染
+
+3.软编码 x264. 
+
+4.硬编码 帧率和码率和压缩率
+
+5. ffmpeg
+
+6. rtmp 
+
+7. h264
+http://blog.csdn.net/heanyu/article/details/6205390
+解析sps,pps的代码在ffmpeg里面就有, 抄出来就行了, 我以前也自己写过...
+ffmpeg的libavcodec/h264_parser.c,
+h264_ps.c
+函数
+ff_h264_decode_seq_parameter_set
+ff_h264_decode_picture_parameter_set
+自己可以看代码
+
+8 协议 －－－抓包
