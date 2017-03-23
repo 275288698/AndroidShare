@@ -1,0 +1,28 @@
+ #include <sys/types.h>
+     #include <sys/socket.h>
+     #include <netdb.h>
+     int getaddrinfo(const char *hostname, const char *servname,
+         const struct addrinfo *hints, struct addrinfo **res);
+     void freeaddrinfo(struct addrinfo *ai);
+     域名解析更新 10分钟
+无缓存：200ms ～ 1000ms
+有缓存： about 20ms
+
+   struct addrinfo {
+             int ai_flags;           /* input flags */
+             int ai_family;          /* protocol family for socket */
+             int ai_socktype;        /* socket type */
+             int ai_protocol;        /* protocol for socket */
+             socklen_t ai_addrlen;   /* length of socket-address */
+             struct sockaddr *ai_addr; /* socket-address for socket */
+             char *ai_canonname;     /* canonical name for service location */
+             struct addrinfo *ai_next; /* pointer to next in list */
+     };
+
+AndroidDefaultDns,公网dns
+   域名解析更新 10分钟
+无缓存：200ms ～ 1000ms
+有缓存： about 20ms
+
+不可串用
+  

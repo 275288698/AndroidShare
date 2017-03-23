@@ -1,0 +1,150 @@
+03-23 11:26:49.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:26:49.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:26:49.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:26:49.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:26:49.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:26:49.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:26:49.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:26:50.020: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:26:50.020: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:26:50.020: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:26:50.020: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:26:50.020: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:26:50.020: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:26:50.020: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:26:50.020: E/MethodCostUtil_function(26256): ===   1    耗时：191
+03-23 11:26:59.830: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:26:59.830: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:26:59.830: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:26:59.830: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:26:59.830: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:26:59.830: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:26:59.830: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:26:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:26:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:26:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:26:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:26:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:26:59.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:26:59.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:26:59.850: E/MethodCostUtil_function(26256): ===   2    耗时：22
+03-23 11:27:09.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:27:09.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:27:09.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:27:09.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:27:09.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:27:09.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:27:09.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:27:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:27:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:27:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:27:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:27:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:27:09.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:27:09.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:27:09.850: E/MethodCostUtil_function(26256): ===   3    耗时：22
+03-23 11:27:19.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:27:19.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:27:19.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:27:19.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:27:19.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:27:19.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:27:19.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:27:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:27:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:27:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:27:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:27:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:27:19.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:27:19.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:27:19.850: E/MethodCostUtil_function(26256): ===   4    耗时：23
+03-23 11:27:29.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:27:29.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:27:29.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:27:29.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:27:29.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:27:29.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:27:29.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:27:29.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:27:29.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:27:29.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:27:29.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:27:29.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:27:29.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:27:29.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:27:29.850: E/MethodCostUtil_function(26256): ===   5    耗时：22
+03-23 11:27:39.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:27:39.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:27:39.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:27:39.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:27:39.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:27:39.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:27:39.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:27:39.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:27:39.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:27:39.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:27:39.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:27:39.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:27:39.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:27:39.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:27:39.850: E/MethodCostUtil_function(26256): ===   6    耗时：22
+03-23 11:27:49.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:27:49.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:27:49.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:27:49.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:27:49.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:27:49.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:27:49.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:27:49.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:27:49.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:27:49.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:27:49.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:27:49.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:27:49.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:27:49.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:27:49.850: E/MethodCostUtil_function(26256): ===   7    耗时：21
+03-23 11:27:59.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:27:59.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:27:59.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:27:59.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:27:59.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:27:59.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:27:59.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:27:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:27:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:27:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:27:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:27:59.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:27:59.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:27:59.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:27:59.850: E/MethodCostUtil_function(26256): ===   8    耗时：22
+03-23 11:28:09.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:28:09.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:28:09.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:28:09.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:28:09.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:28:09.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:28:09.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:28:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:28:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:28:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:28:09.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:28:09.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:28:09.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:28:09.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:28:09.850: E/MethodCostUtil_function(26256): ===   9    耗时：24
+03-23 11:28:19.840: E/MethodCostUtil_function(26256):  DNS 
+03-23 11:28:19.840: E/MethodCostUtil_function(26256): 157.255.158.70
+03-23 11:28:19.840: E/MethodCostUtil_function(26256): 157.255.158.67
+03-23 11:28:19.840: E/MethodCostUtil_function(26256): 157.255.158.72
+03-23 11:28:19.840: E/MethodCostUtil_function(26256): 157.255.158.71
+03-23 11:28:19.840: E/MethodCostUtil_function(26256): 157.255.158.68
+03-23 11:28:19.840: E/MethodCostUtil_function(26256): 157.255.158.69
+03-23 11:28:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :0  
+03-23 11:28:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.68  
+03-23 11:28:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.71  
+03-23 11:28:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.72  
+03-23 11:28:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.67  
+03-23 11:28:19.840: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.70  
+03-23 11:28:19.850: E/MethodCostUtil_function(26256):  setProperties：getaddrinfo ========== :157.255.158.69  
+03-23 11:28:19.850: E/MethodCostUtil_function(26256): ===   10    耗时：19
