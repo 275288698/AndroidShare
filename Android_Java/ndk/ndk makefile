@@ -1,0 +1,31 @@
+NDK_ROOT=D:\eclipse-android\android-ndk-r9d  
+TOOLCHAINS_ROOT=$(NDK_ROOT)\toolchains\arm-linux-androideabi-4.6\prebuilt\windows  
+TOOLCHAINS_PREFIX=$(TOOLCHAINS_ROOT)\bin\arm-linux-androideabi  
+TOOLCHAINS_INCLUDE=$(TOOLCHAINS_ROOT)\lib\gcc\arm-linux-androideabi\4.6\include-fixed  
+PLATFORM_ROOT=$(NDK_ROOT)\platforms\android-19\arch-arm  
+PLATFORM_INCLUDE=$(PLATFORM_ROOT)\usr\include  
+PLATFORM_LIB=$(PLATFORM_ROOT)\usr\lib  
+CC := $(TOOLCHAINS_PREFIX)-gcc  
+  
+FLAGS=-I$(TOOLCHAINS_INCLUDE) \  
+    -I$(PLATFORM_INCLUDE) \  
+    -L$(PLATFORM_LIB) \  
+    -fPIC \  
+    -shared \  
+    -llog \  
+  
+MODULE_NAME=hello  
+CFLAGS  = -Wall -g  
+LDFLAGS = -llog -shared  
+SRC =hello.c  
+EXE =librusteze.so  
+  
+all:  
+    $(CC) -E $(MODULE_NAME).c $(FLAGS) -o $(MODULE_NAME).i  
+    $(CC) -S $(MODULE_NAME).i $(FLAGS) -o $(MODULE_NAME).s  
+    $(CC) -c $(MODULE_NAME).s $(FLAGS) -o $(MODULE_NAME).o  
+    $(CC) $(MODULE_NAME).o $(FLAGS) -o lib$(MODULE_NAME).so  
+    $(TOOLCHAINS_PREFIX)-strip lib$(MODULE_NAME).so  
+  
+clean:  
+    $(RM) $(MODULE_NAME).i $(MODULE_NAME).s $(MODULE_NAME).o $(EXE)  
