@@ -65,9 +65,7 @@ extern "C" {
 //        ScopedJstring nameprefix_jstr(env, _nameprefix);
 //        appender_open_with_cache((TAppenderMode)mode, cache_dir.c_str(), log_dir_jstr.GetChar(), nameprefix_jstr.GetChar());
         int mode = 0;//async - 0 ,sync - 1
-        if (level==0) {
-            mode = 1;
-        }
+
         appender_open_with_cache((TAppenderMode)mode, cache_dir.c_str(), log_dir_jstr.GetChar(), "palivesdk");
         xlogger_SetLevel((TLogLevel)level);
         
