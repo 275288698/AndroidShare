@@ -1,0 +1,60 @@
+https://tieba.baidu.com/p/3481718448
+
+1、jclass 必须释放：
+dalvikvm E  JNI ERROR(app bug):local reference table overflow(max=512)
+http://www.ibm.com/developerworks/cn/java/j-lo-jnileak/index.html?ca=drs-
+　Local Reference != native code 的局部变量
+  函数栈推出时，分配的Local Ref 不会回收、
+  Local Reference 在调用 DeleteLocalRef() 后才会从 Local Ref 表中删除，并且失效，或者在整个 Native Method 执行结束后被删除
+
+2.jmethodID 测试了 100000 次没有释放，运行正常：
+
+3.jobject 需要分情况讨论：
+	① 对象在jni创建，返回给java层的，不需要释放：
+	② 对象在jni创建，仅仅在C语言里面使用的，必须释放：
+	
+	
+	
+2、如何去释放？
+1)      释放String
+jstring jstr = NULL;
+char* cstr = NULL;
+//调用方法
+jstr = (*jniEnv)->CallObjectMethod(jniEnv, mPerson, getName);
+cstr = (char*) (*jniEnv)->GetStringUTFChars(jniEnv,jstr, 0);
+__android_log_print(ANDROID_LOG_INFO, "JNIMsg", "getName  ---- >  %s",cstr );
+//释放资源
+(*jniEnv)->ReleaseStringUTFChars(jniEnv, jstr, cstr);
+(*jniEnv)->DeleteLocalRef(jniEnv, jstr);
+2)      释放 类 、对象、方法
+(*jniEnv)->DeleteLocalRef(jniEnv, XXX);
+ 
+“XXX” 代表 引用对象
+3)      释放 数组家族
+jobjectArray arrays = NULL;
+ 
+jclass jclsStr = NULL;
+ 
+jclsStr = (*jniEnv)->FindClass(jniEnv, "java/lang/String");
+ 
+arrays = (*jniEnv)->NewObjectArray(jniEnv, len, jclsStr, 0);
+ 
+(*jniEnv)->DeleteLocalRef(jniEnv, jclsStr);  //释放String类
+ 
+(*jniEnv)->DeleteLocalRef(jniEnv, arrays); //释放jobjectArray数组
+ 
+   
+ 
+native method 调用 DeleteLocalRef() 释放某个 JNI Local Reference 时，
+首先通过指针 p 定位相应的 Local Reference 在 Local Ref 表中的位置，
+然后从Local Ref 表中删除该 Local Reference，也就取消了对相应 Java 对象的引用（Ref count 减 1）。
+
+
+
+
+
+
+
+
+
+

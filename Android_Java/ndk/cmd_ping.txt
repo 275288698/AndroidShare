@@ -1,0 +1,54 @@
+ping "-c "+1 + " -t "+ i push.cdn.pingan.com.cn
+
+"/system/bin/" + cmd + " " + options + " " + domain
+
+
+PING pinganlive.push.okeycdn.com (121.201.0.4) 56(84) bytes of data.
+From 192.168.105.202: icmp_seq=1 Time to live exceeded
+
+--- pinganlive.push.okeycdn.com ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+
+PING pinganlive.push.okeycdn.com (121.201.0.4) 56(84) bytes of data.
+From 192.168.137.10: icmp_seq=1 Time to live exceeded
+
+--- pinganlive.push.okeycdn.com ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+
+PING pinganlive.push.okeycdn.com (121.201.0.4) 56(84) bytes of data.
+From 192.168.137.1: icmp_seq=1 Time to live exceeded
+
+--- pinganlive.push.okeycdn.com ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+
+PING pinganlive.push.okeycdn.com (121.201.0.4) 56(84) bytes of data.
+From 125.88.111.177: icmp_seq=1 Time to live exceeded
+
+--- pinganlive.push.okeycdn.com ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+
+PING pinganlive.push.okeycdn.com (121.201.0.4) 56(84) bytes of data.
+From 183.2.255.53: icmp_seq=1 Time to live exceeded
+
+--- pinganlive.push.okeycdn.com ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+
+PING pinganlive.push.okeycdn.com (121.201.0.4) 56(84) bytes of data.
+From 183.59.15.66: icmp_seq=1 Time to live exceeded
+
+--- pinganlive.push.okeycdn.com ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+
+PING pinganlive.push.okeycdn.com (121.201.0.4) 56(84) bytes of data.
+From 183.2.241.218: icmp_seq=1 Time to live exceeded
+
+--- pinganlive.push.okeycdn.com ping statistics ---
+1 packets transmitted, 0 received, +1 errors, 100% packet loss, time 0ms
+
+

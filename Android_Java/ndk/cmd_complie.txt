@@ -1,0 +1,11 @@
+Compile the C Source and Create a Native Library
+请注意，生成的本地库的名字，必须与 System.loadLibrary("HelloWorld")；待装载库
+的名字相同。
+Solaris:
+$cc -G -I/java/include -I/java/include/solaris HelloWorld.c -o libHelloWorld.so
+-G: 生成共享库 
+Win:
+$cl -Ic:\java\include -Ic:\java\include\win32 -MD -LD HelloWorld.c
+-FeHelloWorld.dll
+-MD：保证与 Win32 多线程 C 库连接(译者：Win 上分静态、动态、动态多线程...C 库)
+-LD: 生成动态链接库
