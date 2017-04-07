@@ -1,0 +1,1 @@
+/Users/yiqin/Documents/eclipse/android-ndk-r13b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-readelf -d libudt.so  | grep NEEDED

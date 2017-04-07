@@ -1,0 +1,628 @@
+说明：1. env参数是指向函数的列表的指针。在C中调用为(*env)->,在C++中调用为(env)->
+      2. 本地方法的obj 的意义取决于该方法是静态还是实例方法(static or an instance method)。
+         当本地方法作为一个实例方法时，第二个参数相当于对象本身，即this. 当本地方法作为一个静态方法时，
+         指向所在类。
+      3. java中的String不管是中文还是英文，一个字符总是对应两个字节
+      4. Unicode 对应两个字节编码
+      5. UTF8对应一个字节编码
+      6. 变量的定义
+        typedef long            jint;
+	typedef __int64         jlong;
+	typedef signed char     jbyte;
+        typedef unsigned char	jboolean;
+	typedef unsigned short	jchar;
+	typedef short		jshort;
+	typedef float		jfloat;
+	typedef double		jdouble;
+	typedef jint            jsize;
+      
+     
+ 
+      
+      
+#define JNI_FALSE 0
+#define JNI_TRUE 1
+--------------------------字符系列----------------------------------------------------------
+1、
+函数原型：const char* (JNICALL *GetStringUTFChars)(JNIEnv *env, jstring str, jboolean *isCopy)
+函数说明：用来取得某个jstring对象相关的Java字符串,把一个Unicode字串转成UTF-8格式字串 
+参数说明：jstring str：传入一个指向java中的String对象的jstring变量，
+          jboolean *isCopy：传入一个jboolean的指针，是用来标识是否对java的String对象进行了拷贝。
+          如果传入这个jboolean指针不是NULL，则它会给该指针所指向的内存传入JNI_TRUE或JNI_FALSE标
+          识是否进行了拷贝。传入NULL表示不关心是否拷贝字符串，它就不会给jboolean*指向的内存赋值。
+          一般会把isCopy设为NULL，不关心Java VM对返回的指针是否直接指向java.lang.String的内容。
+          一般不能预知VM是否会拷贝java.lang.String的内容，程序员应该假设GetStringChars会为
+          java.lang.String分配内存。在JavaVM的实现中，垃圾回收机制会移动对象，并为对象重新配置
+          内存。一但java.lang.String占用的内存暂时无法被GC重新配置，将产生内存碎片，过多的内存碎
+          片，会更频繁的出现内存不足的假象。
+返回类型：char*
+2、
+函数原型： void (JNICALL *ReleaseStringUTFChars)(JNIEnv *env, jstring str, const char* chars);
+函数说明：来释放拷贝的内容
+参数说明: jstring str 指定一个jstring变量，即是要释放的本地字符串的来源，
+           const char* chars 就是要释放的本地字符串
+
+3、
+函数原型：const jchar *(JNICALL *GetStringChars)(JNIEnv *env, jstring str, jboolean *isCopy);
+函数说明：用来取得某个jstring对象相关的Java字符串，以Unicode形式存储
+参数说明: 参数和GetStringUTFChars函数参数意思一样
+返回类型：jchar 两个字节
+
+4、
+函数原型：void (JNICALL *ReleaseStringChars)(JNIEnv *env, jstring str, const jchar *chars);
+函数说明：同ReleaseStringUTFChars
+参数说明: 同ReleaseStringUTFChars
+返回类型：void
+
+5、
+函数原型：jsize (JNICALL *GetStringLength)(JNIEnv *env, jstring str);
+函数说明：获得以Unicode编码的字串长度
+参数说明: jstring str Java 传进来的字符串对象
+返回类型：Java中String对象中字符的个数
+6、
+函数原型： jsize (JNICALL *GetStringUTFLength)(JNIEnv *env, jstring str);
+函数说明：获得以UTF8编码的字串长度
+参数说明: jstring str Java 传进来的字符串对象
+返回类型：Java中String对象中字符的个数
+
+
+7、
+函数原型：void GetStringUTFRegion(JNIEnv *env,jstring str, jsize start, jsize len, char *buf)
+函数说明：拷贝Java字符串并以UTF-8编码传入buffer。把java字符串的内容直接拷贝到C/C++的字符数组中。
+          在呼叫这个函数之前必须有一个C/C++分配出来的字符串，然后传入到这个函数中进行字符串的拷贝（此函数不分配内存）
+参数说明：jstring str Java 传进来的字符串对象
+          jsize start Java 传进来的字符串对象复制的起始地址
+          jsize len 复制的数据长度
+          char *buf 存放数据的buf
+返回类型：void
+
+8、
+函数原型：void GetStringRegion(JNIEnv *env,jstring str, jsize start,jsize len,jchar* buffer);
+函数说明：拷贝java字符串并以UTF-16编码传入buffer
+函数说明：同GetStringUTFRegion
+参数说明: 同GetStringUTFRegion
+返回类型：void
+
+
+9、
+函数原型：jstring NewString(JNIEnv *env,const jchar* str,jsize len);
+函数说明：在C/C++本地代码中创建JAVA的String字符串对象
+参数说明：const jchar* str 在C中创建的jstring对象
+          jsize len 组建字符的长度值，从0开始组建
+返回类型：jstring 
+
+10、
+函数原型：jstring NewStringUTF(const char * str);
+函数说明：在C/C++本地代码中创建JAVA的String字符串对象
+参数说明：const char* str 在C中创建的jstring对象
+          jsize len 组建字符的长度值，从0开始组建
+返回类型：jstring 
+
+
+以上函数所用实例：
+
+
+C语言实现：
+
+JNIEXPORT jstring JNICALL Java_com_tz_test_NativeTest_getCountFromC
+  (JNIEnv * env , jclass obj,jstring str)
+  {
+
+
+  const jchar* getStr = (*env)->GetStringChars(env,str,JNI_FALSE);
+  LOGI("getStrData==%s",getStr);
+  jsize strSize = (*env)->GetStringLength(env,str);
+  LOGI("getStrData==%d",strSize);
+  (*env)->ReleaseStringChars(env,str,getStr);
+  
+
+  const char *getCStr = (*env)->GetStringUTFChars(env,str,JNI_FALSE);
+  LOGI("getCStrData==%s",getCStr);
+  jsize strCSize = (*env)->GetStringUTFLength(env,str);
+  LOGI("getCStrData==%d",strCSize);
+  (*env)->ReleaseStringUTFChars(env,str,getCStr);
+  
+  char outBuf [10] ;
+  (*env)->GetStringUTFRegion(env,str,0,10,outBuf);
+  LOGI("getOutCStrData==%s",outBuf);
+  
+  jchar outJBuf[10];
+  (*env)->GetStringRegion(env,str,0,10,outJBuf);
+ 
+  
+ 
+  jstring jstr = (*env)->NewString(env,getStr,5);
+ 
+ const char * cjstring = "getstringfromC";
+ jstr = (*env)->NewStringUTF(env,cjstring);
+  return jstr;
+  }
+
+          
+          
+   
+
+//-----------------------------数组系列-----------------------------------------------------------------------------
+
+1、
+函数原型：jbyte * (JNICALL *GetByteArrayElements)(JNIEnv *env, jbyteArray array, jboolean *isCopy);
+函数说明  将Java中的byte数组转换成JNI中的基本类型，并由该类型的指针指向第一个元素
+参数说明：jbyteArray array，Java中的byte数组
+          jboolean *isCopy 同字符函数的isCopy
+返回类型  jbyte *
+
+2、
+函数原型：void (JNICALL *ReleaseByteArrayElements)(JNIEnv *env, jbyteArray array, jbyte *elems, jint mode)
+函数说明：释放分配的jbyte数组
+参数说明：jbyteArray array  Java中的byte数组
+          jbyte *elems 由GetByteArrayElements函数分配的空间
+          jint mode 释放模式 一般给0
+          
+3、
+函数原型：jsize (JNICALL *GetArrayLength)(JNIEnv *env, jarray array);
+函数说明：获得数组元素的个数
+参数说明：jarray array  Java数组的对象
+返回类型: jsize 数组元素个数
+
+4、
+函数原型：void (JNICALL *GetByteArrayRegion)(JNIEnv *env, jbyteArray array, jsize start, jsize len, jbyte *buf);
+函数说明：将jbyteArray数组拷贝到buf中
+参数说明：jbyteArray array 生成的jbyteArray 数组，可以使Java传递的，也可以使jni中自己生成
+          jsize start  jbyteArray数组的起始地址
+          jsize 要拷贝的数据长度
+          jbyte buf 待存放数据的 jbyte buf
+返回类型  void    
+
+5、 
+函数原型：void (JNICALL *SetByteArrayRegion)(JNIEnv *env, jbyteArray array, jsize start, jsize len, jbyte *buf);
+函数说明：将 buf数组中的值拷贝到jbyteArray数组中
+参数说明：jbyteArray array 生成的jbyteArray 数组，可以使Java传递的，也可以使jni中自己生成
+          jsize start  jbyteArray数组的起始地址， 从buf的首地址开始复制
+          jsize 要拷贝的数据长度 
+          jbyte buf 待存放数据的 jbyte buf
+返回类型  void       
+
+6、
+函数原型：jbyteArray (JNICALL *NewByteArray)(JNIEnv *env, jsize len);
+函数说明：生成一个jbyteArray型数组(一维数组)
+参数说明：jsize len 生成数组的大小
+返回类型：jbyteArray 数组
+
+7、还有其它类型生成的一维数组
+1> jbooleanArray (JNICALL *NewBooleanArray)(JNIEnv *env, jsize len);
+2> jbyteArray (JNICALL *NewByteArray)(JNIEnv *env, jsize len);
+3> jcharArray (JNICALL *NewCharArray)(JNIEnv *env, jsize len);
+4> jshortArray (JNICALL *NewShortArray)(JNIEnv *env, jsize len);
+5> jintArray (JNICALL *NewIntArray)(JNIEnv *env, jsize len);
+6> jlongArray (JNICALL *NewLongArray)(JNIEnv *env, jsize len);
+7> jfloatArray (JNICALL *NewFloatArray)(JNIEnv *env, jsize len);
+8> jdoubleArray (JNICALL *NewDoubleArray)(JNIEnv *env, jsize len);
+9> jobjectArray (JNICALL *NewObjectArray)(JNIEnv *env, jsize len, jclass clazz, jobject init);
+
+实例：
+
+JNIEXPORT jstring JNICALL Java_com_tz_test_NativeTest_getCountFromC
+  (JNIEnv * env , jclass obj,jstring str,jbyteArray bdata)
+  {
+  jint i = 0 ;	
+ 
+  jbyte *jByte = (*env)->GetByteArrayElements(env,bdata,NULL);
+  
+  
+  jsize len = (*env)->GetArrayLength(env,bdata);
+  
+  LOGI("arrary len = %d",len);
+  unsigned char *cBuf  = (unsigned char *)malloc(len);
+  
+  memset(cBuf,0,len);
+  memcpy(cBuf,jByte,len);
+  
+  jbyte *buf = (jbyte * )malloc(len);
+  
+   //另外一种方法
+ (*env)->GetByteArrayRegion(env,bdata,0,len,buf);
+  
+  
+  
+  jbyteArray byteBuf = (*env)->NewByteArray(env,len);
+  
+  (*env)->SetByteArrayRegion(env,byteBuf,2,len-5,buf);
+  jByte = (*env)->GetByteArrayElements(env,byteBuf,NULL);
+  
+  for(i = 0 ; i < len; i++)
+  {
+  	LOGI("%d",jByte[i]);
+  }
+    
+    
+    
+  (*env)->ReleaseByteArrayElements(env, bdata, jByte, 0);
+
+
+  const char * cjstring = "getstringfromC";
+  jstring jstr = (*env)->NewStringUTF(env,cjstring);
+  return jstr;
+  }
+ 
+ 还有和jbyteArray一样的其它类型的数组，用法一致
+ 
+ 
+jbooleanArray
+jbyteArray
+jcharArray
+jshortArray
+jintArray
+jlongArray
+jfloatArray
+jdoubleArray
+jobjectArray
+ 
+ 
+  
+//------------------------------在jni中调用Java中的方法的函数------------------------------------------
+
+
+类型签名：
+
+签名是一种用参数个数和类型区分同名方法的手段，即解决方法重载问题。
+其中要特别注意的是：
+1. 类描述符开头的'L'与结尾的';'必须要有 String类型的签名是“Ljava/lang/String;”
+2. 数组描述符，开头的'['必须有.
+3. 方法描述符规则: "(各参数描述符)返回值描述符"，其中参数描述符间没有任何分隔
+符号
+
+
+
+    类型签名  Java类型      C类型
+	V      void            void
+	Z      jboolean     boolean
+	I      jint              int
+	J      jlong            long
+	D      jdouble       double
+	F      jfloat            float
+	B      jbyte            byte
+	C      jchar           char
+	S      jshort          short
+	
+	      数组则以"["开始，用两个字符表示
+	[I       jintArray      int[]
+	[F     jfloatArray    float[]
+	[B     jbyteArray    byte[]
+	[C    jcharArray    char[]
+	[S    jshortArray   short[]
+	[D    jdoubleArray double[]
+	[J     jlongArray     long[]
+	[Z    jbooleanArray boolean[]
+
+ 1、
+ 函数原型：jclass (JNICALL *GetObjectClass)(JNIEnv *env, jobject obj);
+ 函数说明：函数得到该对像的类，该函数返回一个jclass类型值，其中obj参数表示要你想要得到类型的类对象。通过该方法可以获取到调用该方法的对象所在的类
+ 参数说明：见开头
+ 返回类型：jclass
+ 2、
+ 函数原型：jclass (JNICALL *FindClass)(JNIEnv *env, const char *name);
+ 函数说明：功能同GetObjectClass,但是在访问静态域的时候必须使用FindClass，而不能使用GetObjectClass。
+           在FindClass()的第二个参数是类的编码签名，类的编码签名和 基本类型的编码签名有所不同，
+           如果类在当前包中，就直接是类的名称，如果类不在当前包中则要加入该类的详细路径：
+           例如String类在java.lang 包中，则String的签名要写成( Ljava/lang/String;),
+           其中的（L和；）是不可少的，其中（；）是表达是的终止符
+ 参数说明：const char *name：类全名（即包名后跟类名，之间由“/”分隔）。如果该名称以“[”（数组签名字符）打头，则返回一个一维数组类。
+ 返回类型：jclass
+ 3、
+ 函数原型：jfieldID (JNICALL *GetFieldID)(JNIEnv *env, jclass clazz, const char *name, const char *sig);
+ 函数说明：获取实例域的ID
+ 参数说明：const char *name Java中定义的实例域的名称
+           const char *sig  实例域的类型签名
+           jclass clazz 获取到的类
+ 返回类型：jfieldID
+ 4、
+ 函数原型：jobject (JNICALL *GetObjectField)(JNIEnv *env, jobject obj, jfieldID fieldID);
+ 函数说明：获取到域ID的内容,Java的String类型，要用GetObjectField函数获取，这里提示大家没有
+           GetStringField这样的函数在JNI中，或者说在C语言中
+ 参数说明：jfieldID fieldID 有效的域ID
+           jobject obj  Java中传下来的类对象
+ 返回类型：域内容
+ 5、
+ 函数原型：jint (JNICALL *GetIntField)(JNIEnv *env, jobject obj, jfieldID fieldID);
+ 函数说明：获取整型实例域的内容
+ 参数说明：jfieldID fieldID 有效的域ID
+           jobject obj  Java中传下来的类对象
+ 返回类型：jint
+ 
+ 6、还有其它类型的获取实例域的内容函数用法和GetIntField方法使用一样，
+ 1> jboolean (JNICALL *GetBooleanField)(JNIEnv *env, jobject obj, jfieldID fieldID);
+ 2> jbyte (JNICALL *GetByteField)(JNIEnv *env, jobject obj, jfieldID fieldID);
+ 3> jchar (JNICALL *GetCharField)(JNIEnv *env, jobject obj, jfieldID fieldID);
+ 4> jshort (JNICALL *GetShortField)JNIEnv *env, jobject obj, jfieldID fieldID);
+ 5> jlong (JNICALL *GetLongField)(JNIEnv *env, jobject obj, jfieldID fieldID);
+ 6> jfloat (JNICALL *GetFloatField)(JNIEnv *env, jobject obj, jfieldID fieldID);
+ 7> jdouble (JNICALL *GetDoubleField)(JNIEnv *env, jobject obj, jfieldID fieldID);
+ 
+ 
+ 7、
+ 函数原型：jfieldID (JNICALL *GetStaticFieldID)(JNIEnv *env, jclass clazz, const char *name, const char *sig);
+ 函数说明：获取静态域ID
+ 参数说明：同GetFieldID
+ 返回类型：jfieldID
+ 
+ 8、
+ 函数原型：jbyte (JNICALL *GetStaticByteField)(JNIEnv *env, jclass clazz, jfieldID fieldID);
+ 函数说明：获取静态域的数值
+ 参数说明：jclass clazz FindClass函数获取到的Class，注意： 不是obj
+           fieldID fieldID 同GetIntField
+ 返回类型：jbyte
+ 9、还有其它类型获取静态实例域的函数，使用方法同GetStaticByteField
+
+    1> jobject (JNICALL *GetStaticObjectField)(JNIEnv *env, jclass clazz, jfieldID fieldID); //jstring
+    2> jboolean (JNICALL *GetStaticBooleanField)(JNIEnv *env, jclass clazz, jfieldID fieldID);
+    3> jchar (JNICALL *GetStaticCharField)(JNIEnv *env, jclass clazz, jfieldID fieldID);
+    4> jshort (JNICALL *GetStaticShortField)(JNIEnv *env, jclass clazz, jfieldID fieldID);
+    5> jint (JNICALL *GetStaticIntField)(JNIEnv *env, jclass clazz, jfieldID fieldID);
+    6> jlong (JNICALL *GetStaticLongField)(JNIEnv *env, jclass clazz, jfieldID fieldID);
+    7> jfloat (JNICALL *GetStaticFloatField)(JNIEnv *env, jclass clazz, jfieldID fieldID);
+    8> jdouble (JNICALL *GetStaticDoubleField)(JNIEnv *env, jclass clazz, jfieldID fieldID);
+ 
+ 10、
+ 函数原型：void (JNICALL *SetObjectField)(JNIEnv *env, jobject obj, jfieldID fieldID, jobject val);   
+ 函数说明：设置fieldID对应获取的实例域的新值(非静态)，此函数针对jstring
+ 参数说明：jfieldID fieldID,有效的域ID
+           jobject val ,域的新值
+ 返回类型：void
+ 
+ 12、
+ 函数原型：void (JNICALL *SetByteField)(JNIEnv *env, jobject obj, jfieldID fieldID, jbyte val);  
+ 函数说明：设置字节型的实例域(非静态)
+ 参数说明：同SetObjectField
+ 返回类型：void 
+ 13、还有其它类型的设置实例域的方法使用方法和SetByteField一样
+   
+   
+   1> void (JNICALL *SetBooleanField)(JNIEnv *env, jobject obj, jfieldID fieldID, jboolean val);    
+   2> void (JNICALL *SetCharField)(JNIEnv *env, jobject obj, jfieldID fieldID, jchar val);
+   3> void (JNICALL *SetShortField)(JNIEnv *env, jobject obj, jfieldID fieldID, jshort val);
+   4> void (JNICALL *SetIntField)(JNIEnv *env, jobject obj, jfieldID fieldID, jint val);
+   5> void (JNICALL *SetLongField)(JNIEnv *env, jobject obj, jfieldID fieldID, jlong val);
+   6> void (JNICALL *SetFloatField)(JNIEnv *env, jobject obj, jfieldID fieldID, jfloat val);
+   7> void (JNICALL *SetDoubleField)(JNIEnv *env, jobject obj, jfieldID fieldID, jdouble val);
+   
+ 14、
+ 函数原型：void (JNICALL *SetStaticByteField)(JNIEnv *env, jclass clazz, jfieldID fieldID, jbyte value);
+ 函数说明：设置fieldID对应获取的实例域的新值(静态)
+ 参数说明：jclass clazz,FindClass获取到的cla
+ 返回类型：void
+ 
+ 15、还有其它类型的设置静态实例域的方法使用方法和SetStaticByteField一样
+ 
+ 1> void (JNICALL *SetStaticObjectField)(JNIEnv *env, jclass clazz, jfieldID fieldID, jobject value);
+ 2> void (JNICALL *SetStaticBooleanField)(JNIEnv *env, jclass clazz, jfieldID fieldID, jboolean value);
+ 3> void (JNICALL *SetStaticCharField) (JNIEnv *env, jclass clazz, jfieldID fieldID, jchar value);
+ 4> void (JNICALL *SetStaticShortField)(JNIEnv *env, jclass clazz, jfieldID fieldID, jshort value);
+ 5> void (JNICALL *SetStaticIntField) (JNIEnv *env, jclass clazz, jfieldID fieldID, jint value);
+ 6> void (JNICALL *SetStaticLongField)   (JNIEnv *env, jclass clazz, jfieldID fieldID, jlong value);
+ 7> void (JNICALL *SetStaticFloatField)  (JNIEnv *env, jclass clazz, jfieldID fieldID, jfloat value);
+ 8> void (JNICALL *SetStaticDoubleField)(JNIEnv *env, jclass clazz, jfieldID fieldID, jdouble value);
+ 
+ 以上方法使用的实例如下：
+ 
+ JNIEXPORT jstring JNICALL Java_com_tz_test_NativeTest_getCountFromC
+  (JNIEnv * env , jclass obj,jstring str,jbyteArray bdata)
+  {
+ //jstring claPath = "com/tz/test/NativeTest";
+ 
+ 
+ const char * cjstring = "new String";
+ jstring jstr = (*env)->NewStringUTF(env,cjstring); 
+ 
+ 
+// const char *cClaPath = (*env)->GetStringUTFChars(env,claPath,NULL);
+  jclass cls = (*env)->FindClass(env,"com/tz/test/NativeTest");
+ //jclass cls = (*env)->GetObjectClass(env,obj);
+ if(cls == NULL)
+ {
+ 	return NULL;
+ }
+ //获取实例域String	
+ jfieldID mfieldid = (*env)->GetFieldID(env,cls,"data","Ljava/lang/String;");
+ (*env)->SetObjectField(env,obj,mfieldid,jstr);
+ jstring getfieldValue = (jstring)(*env)->GetObjectField(env,obj,mfieldid); 
+ const char *display = (*env)->GetStringUTFChars(env,getfieldValue,NULL);
+ LOGI("GET CLASS STRING FIELD VALUE  == %s",display);
+ 
+ 
+//获取实例域INT
+ mfieldid = (*env)->GetFieldID(env,cls,"mInt","I");
+ jint getInt = (*env)->GetIntField(env,obj,mfieldid);
+ LOGI("GET CLASS INT FIELD VALUE == %d",getInt);
+ 
+ //获取byte实例域
+ jbyte mbyte = 45;
+ mfieldid = (*env)->GetFieldID(env,cls,"mByte","B");
+ (*env)->SetByteField(env,obj,mfieldid,mbyte);
+ jbyte getByte = (*env)->GetByteField(env,obj,mfieldid);
+ LOGI("GET CLASS BYTE FIELD VALUE == %d",getByte);
+
+  
+ //获取静态的byte实例域 必须使用findclass函数
+ mfieldid = (*env)->GetStaticFieldID(env,cls,"staByte","B");
+ (*env)->SetStaticByteField(env,cls,mfieldid,(jbyte)65);
+ jbyte getStaByte = (*env)->GetStaticByteField(env,cls,mfieldid);
+ LOGI("GET CLASS STATIC BYTE FIELD VALUE == %d",getStaByte);
+ 
+ (*env)->ReleaseStringUTFChars(env,getfieldValue,display);
+  return NULL;
+  }
+
+ 
+ 
+ //--------------------------------访问Java中的方法-------------------------------------------------
+ 
+ 1、
+ 函数原型：jmethodID (JNICALL *GetMethodID)(JNIEnv *env, jclass clazz, const char *name, const char *sig);
+ 函数说明: 获取方法的ID
+ 参数说明：jclass clazz, 执行FindClass或者是getObjectClass函数返回的jclass类型
+           const char *name, Java定义的方法名称
+           const char *sig, 参数的签名
+ 返回类型：jmethodID        
+ 
+ 
+ 2、
+ 函数原型：jint (JNICALL *CallIntMethod) (JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 函数说明：调用Java中的方法(非静态)
+ 参数说明：jmethodID methodID，调用方法的ID
+           ...该方法的参数
+ 返回类型：jnit
+ 
+ 3、还有其它返回类型调用Java中的方法的函数
+ 1> jobject (JNICALL *CallObjectMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...); //调用返回类型是jstring
+ 2> jboolean (JNICALL *CallBooleanMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 3> jbyte (JNICALL *CallByteMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 4> jchar (JNICALL *CallCharMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 5> jshort (JNICALL *CallShortMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 6> jint (JNICALL *CallIntMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 7> jlong (JNICALL *CallLongMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 8> jfloat (JNICALL *CallFloatMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 9> jdouble (JNICALL *CallDoubleMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 10> void (JNICALL *CallVoidMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 
+ 4、
+ 函数原型：jmethodID (JNICALL *GetStaticMethodID)(JNIEnv *env, jclass clazz, const char *name, const char *sig);
+ 函数说明：获得Java中定义的静态的方法的ID
+ 参数说明：同GetMethodID
+ 返回类型：同GetMethodID
+ 
+ 5、
+ 函数原型：jobject (JNICALL *CallStaticObjectMethod)(JNIEnv *env, jclass clazz, jmethodID methodID, ...);
+ 函数说明：调用静态的返回类型为String 的方法
+ 参数说明: 同CallIntMethod
+ 返回类型：jobject
+ 
+ 6、还有其它返回类型调用Java中的静态方法
+ 1> jobject (JNICALL *CallStaticObjectMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...); //调用返回类型是jstring
+ 2> jboolean (JNICALL *CallStaticBooleanMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 3> jbyte (JNICALL *CallStaticByteMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 4> jchar (JNICALL *CallStaticCharMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 5> jshort (JNICALL *CallStaticShortMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 6> jint (JNICALL *CallStaticIntMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 7> jlong (JNICALL *CallStaticLongMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 8> jfloat (JNICALL *CallStaticFloatMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 9> jdouble (JNICALL *CallStaticDoubleMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 10> void (JNICALL *CallStaticVoidMethod)(JNIEnv *env, jobject obj, jmethodID methodID, ...);
+ 
+ 方法调用示例：
+ 
+ JNIEXPORT jstring JNICALL Java_com_tz_test_NativeTest_getCountFromC
+  (JNIEnv * env , jclass obj,jstring str,jbyteArray bdata)
+  {
+ //jstring claPath = "com/tz/test/NativeTest";
+ 
+ 
+ const char * cjstring = "new String";
+ jstring jstr = (*env)->NewStringUTF(env,cjstring); 
+ 
+ 
+// const char *cClaPath = (*env)->GetStringUTFChars(env,claPath,NULL);
+  jclass cls = (*env)->FindClass(env,"com/tz/test/NativeTest");
+ //jclass cls = (*env)->GetObjectClass(env,obj);
+ if(cls == NULL)
+ {
+ 	return NULL;
+ }
+ 
+ jmethodID mid = (*env)->GetMethodID(env,cls,"getResult","(II)I");	
+ 
+ jint x = 4;
+ jint y = 9;
+ 
+ jint getInt = (*env)->CallIntMethod(env,obj,mid,x,y);
+ 
+ LOGI("GET INT VALUE FROM METHOD = %d",getInt);
+ 
+ mid =  (*env)->GetStaticMethodID(env,cls,"getStr","(II)Ljava/lang/String;");
+ jstring getstr = (*env)->CallStaticObjectMethod(env,cls,mid,6,9);
+ const char *display = (*env)->GetStringUTFChars(env,getstr,NULL);
+ LOGI("GET CLASS StATIC STRING METHOD VALUE  == %s",display);
+  (*env)->ReleaseStringUTFChars(env,getstr,display);
+  return NULL;
+  }
+  
+ //---------------------------------其它常用函数介绍------------------------------------------
+ 1、
+ 函数原型：jobjectArray (JNICALL *NewObjectArray)(JNIEnv *env, jsize len, jclass clazz, jobject init);
+ 函数说明：构造新的数组，它将保存类clazz中的对象。所有元素初始值均设为init。就是说此函数是建立保存类
+           对象的数组，保存的对象类型为clazz。
+ 参数说明：jsize len,数组的长度，对于Java中定义的多维数组在jni中显示为jobjectArray
+           jclass clazz、数组保存的对象类型
+           jobject init、数组的初始值
+ 返回类型：jobjectArray         
+ 
+ 2、
+ 函数原型：void DeleteLocalRef(JNIEnv *env,jobject obj)      
+ 函数说明：删除obj所指向的局部引用
+ 参数说明：jobject obj,局部引用
+ 返回类型：void
+ 
+ 3、
+ 函数原型：void SetObjectArrayElement(JNIEnv *env,jobjectArray array, jsize index,jobject val)
+ 函数说明：设置Object数组的元素
+ 参数说明：jobjectArray array,Java数组(可以是多维数组)
+           jsize index, 数组下标
+           jobject val, 数组新值，可以使一个值，也可以是一个数组
+ 返回类型：void  
+ 
+ 4、
+ 函数原型： void SetIntArrayRegion(JNIEnv *env,jintArray array, jsize start, jsize len,const jint *buf)     
+ 函数说明： 将基本类型数组的某一区域从缓冲区中复制回来的一组函数
+ 参数说明： jintArray array,  java数组
+            jsize start,Java数组的起始地址
+            jsize len,要复制数组的长度
+            const jint *buf,数据缓存区
+ 返回类型： void
+ 
+ 
+ 上述方法使用的一个实例：
+ 
+ java中定义
+ public  native byte[][] getCountFromC(String str,byte data[]); 
+ 
+ C中定于
+  
+JNIEXPORT jobjectArray JNICALL Java_com_tz_test_NativeTest_getCountFromC
+  (JNIEnv * env , jclass obj,jstring str,jbyteArray bdata)
+  {
+ 
+    jobjectArray result;
+    jint i = 0;
+    jint j = 0 ;
+    jbyte temp [7]= {0,1,2,3,4,5,6};
+    
+    jclass byte_class = (*env)->FindClass(env,"[B");//建立对象数组
+    
+    if(byte_class == NULL)
+    {
+    	return NULL;
+    }
+    else
+    {
+    	result = (*env)->NewObjectArray(env,3,byte_class,NULL);
+    }
+    LOGI("Create byte_class Success");
+    for(i = 0 ; i < 3 ; i++)
+    {
+    	jbyteArray bytebuf = (*env)->NewByteArray(env,4);
+        
+        for(j = 0 ; j < 4; j ++)
+        {
+        	temp[j] = i * j;
+        }
+    
+    	
+    	(*env)->SetByteArrayRegion(env,bytebuf,0,4,temp);
+    	(*env)->SetObjectArrayElement(env,result,i,bytebuf);
+    	(*env)->DeleteLocalRef(env,bytebuf);
+    }
+    
+    return result;
+  }
+//--------------------------------------------------------------------------------------------
+ 
+

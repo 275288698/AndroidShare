@@ -1,0 +1,43 @@
+unicode  
+utf-8  
+
+(*env)->GetStringLength   (env,"易q")  2
+		GetStringUTFLength  	       4
+		
+jboolean flag;
+const char* ret = (*env)->GetStringUTFChars(env,str1,NULL);
+const char* ret = (*env)->GetStringUTFChars(env,str1,&flag);//JNI_TRUE 1, JNI_FALSE 0;
+const char* ret = 		  GetStringChars   (env,str1,NULL)
+const char* ret = 		  GetStringChars   (env,str1,&flag);
+
+
+(*env)->ReleaseStringUTFChars(env,str1,ret);
+(*env)->ReleaseStringChars   (env,str1,ret);
+
+	char buff[128] = hello ;
+	char* pBuff = buff + 6;
+	// 将JVM中的字符串以utf-8编码拷入C缓冲区,该函数内部不会分配内存空间
+	(*env)->GetStringUTFRegion(env,j_str,0,len,pBuff);
+	return (*env)->NewStringUTF(env,buff);
+	
+5> GetStringRegion和GetStringUTFRegion：
+分别表示获取Unicode和UTF-8编码字符串指定范围内的内容。
+这对函数会把源字符串复制到一个预先分配的缓冲区内。
+下面代码用GetStringUTFRegion重新实现sayHello函数：	
+
+http://www.cnblogs.com/bluesky4485/archive/2011/12/13/2285802.html
+http://www.2cto.com/kf/201412/364156.html
+
+1、对于小字符串来说，GetStringRegion和GetStringUTFRegion这两对函数是最佳选择，因为缓冲区可以被编译器提前分配，而且永远不会产生内存溢出的异常。当你需要处理一个字符串的一部分时，使用这对函数也是不错。因为它们提供了一个开始索引和子字符串的长度值。另外，复制少量字符串的消耗 也是非常小的。
+
+2、使用GetStringCritical和ReleaseStringCritical这对函数时，必须非常小心。一定要确保在持有一个由 GetStringCritical 获取到的指针时，本地代码不会在 JVM 内部分配新对象，或者做任何其它可能导致系统死锁的阻塞性调用
+
+3、获取Unicode字符串和长度，使用GetStringChars和GetStringLength函数
+
+4、获取UTF-8字符串的长度，使用GetStringUTFLength函数
+
+5、创建Unicode字符串，使用NewStringUTF函数
+
+6、从Java字符串转换成C/C++字符串，使用GetStringUTFChars函数
+
+7、通过GetStringUTFChars、GetStringChars、GetStringCritical获取字符串，这些函数内部会分配内存，必须调用相对应的ReleaseXXXX函数释放内存

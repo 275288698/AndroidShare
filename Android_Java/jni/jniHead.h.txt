@@ -1,0 +1,12 @@
+1：进入src/ 目录，然后运行
+
+       javac com/cqb/hellojnitest/HelloJniTest.java
+
+       可以看到在相应的目录下生成了 HelloJniTest.class
+
+       或直接在.java文件所在的目录底下 javac
+
+
+2:  在src/目录下  及工程包名package com.cqb.hellojnitest所在的目录下
+
+      javah com.cqb.hellojnitest.HelloJniTest
