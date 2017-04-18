@@ -1,0 +1,68 @@
+#5.32
+template <typename T>
+class Base{
+public:
+	void exit();	
+}
+
+template <typename T>
+class Derived:public Base{
+public:
+	void foo(){
+		exit();//error link, or call func exit but not Base::exit;
+		Bass<T>::exit();
+		this->exit();
+	}
+}
+
+#5.33 不同型别的T进行赋值转换
+template <typename T>
+class Stack{
+private:
+	std::deque<T> elems;
+public:
+	void push(T const&);
+	void pop();
+	T top()cosnt;
+	bool empty()const{
+		return elems.empty();
+	}
+	
+	//＊＊＊
+	template <typename T2>
+	Stack<T>& operator= (Stack<T2> const &);
+}
+
+tmeplate <typename T>
+tmeplate <typename T2>
+Stack<T>& Stack<T>::operator=(Stack<T2> const& op2){
+	if((void*)this==(void*)&op2){ //no use 
+		return *this;
+	}
+	Stack<T2> tmp(op2);
+	elems.clear();
+	while(!tmp.empty()){
+		elems.push_front(tmp.top());
+		tmp.pop();
+	}
+	return *this;		
+}
+
+#5.4
+
+template <typename T,typename CONT = std::deque<T>>
+
+template <typename T,template<typename ELEM>class CONT = std::deque>
+tempalte <typename T, template<typename>class CONT = std::deque>
+
+#notice: class ok , typename error.
+#notcie: 函数的声明不允许有 template template parameters
+
+
+
+
+
+
+
+
+
