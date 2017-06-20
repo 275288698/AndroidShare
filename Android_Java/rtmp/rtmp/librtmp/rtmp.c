@@ -5241,13 +5241,21 @@ int RTMP_SendPacket_reconnect(RTMPMetadata *pMetadata, BufferConfig *pConfig, RT
     // add the time cost
     if (ret == TRUE) {
         uint32_t ts = packet->m_nTimeStamp;
-        uint32_t cur_ts = RTMP_GetTime();
-        RTMP_Log(RTMP_LOGINFO,"yq log : ts:%d  cur_ts:%d\n",ts, cur_ts);
+//        uint32_t cur_ts = RTMP_GetTime();
+//        RTMP_Log(RTMP_LOGINFO,"yq log : ts:%d  cur_ts:%d\n",ts, cur_ts);
+//#define RTMP_PACKET_TYPE_AUDIO              0x08
+//#define RTMP_PACKET_TYPE_VIDEO              0x09
+        
+        
+        uint8_t  type = packet->m_packetType;
+        uint32_t size = packet->m_nBodySize;
         
         char s1[20],s2[20];
      
+        
+        
         sprintf(s1,"pts=%d",ts);
-        sprintf(s2,"timestamps=%d",cur_ts);
+        sprintf(s2,"type=%d,size=%d",type,size);
       
         
         g_func_rtmpSetProc(s1,s2);
