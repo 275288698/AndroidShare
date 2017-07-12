@@ -1,0 +1,16 @@
+http://bhirawa87.my.id/blog/android-studio-cmake/
+
+That’s typical folder structure in Android Studio. 
+Next we create directory cpp inside main folder, 
+and then create CMakeLists.txt. 
+If you’re not familiar with CMakeLists.txt find out more here and here.
+
+CMakeLists.txtDefault
+
+1   cmake_minimum_required(VERSION 2.8.7)
+2	add_library(hello-jni SHARED hello-jni.c)
+3	target_link_libraries(hello-jni log android)
+
+  cmake_minimum_required(VERSION 2.8.7) means we need minimum version 2.8.7 of cmake. It depends on what you need in your project. by default Android Studio built in CMake version is 3.4.1
+add_library(hello-jni SHARED hello-jni.c) means we create shared library named hello-jni with hello-jni.c as  source.
+target_link_libraries(hello-jni log android) means we link library needed by hello-jni, in this case log and android.\
