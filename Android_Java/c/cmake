@@ -32,8 +32,7 @@ target_link_libraries(Demo MathFunctions)
 			aux_source_directory(. DIR_LIB_SRCS)
 			# 生成链接库
 			add_library (MathFunctions ${DIR_LIB_SRCS})
-
-			
+	
 =========================================================
 自定义编译选项
 CMake 允许为项目增加编译选项，从而可以根据用户的环境和需求选择最合适的编译方案。
