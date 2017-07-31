@@ -1,0 +1,25 @@
+https://stackoverflow.com/questions/5666513/what-is-the-best-method-to-render-video-frames?noredirect=1
+
+I'm going to attempt to elaborate on and consolidate the answers here based on my own experiences.
+
+Why openGL
+
+When people think of rendering video with openGL, most are attempting to exploit the GPU to do color space conversion and alpha blending.
+
+For instance converting YV12 video frames to RGB. Color space conversions like YV12 -> RGB require that you calculate the value of each pixel individually. Imagine for a frame of 1280 x 720 pixels how many operations this ends up being.
+
+What I've just described is really what SIMD was made for - performing the same operation on multiple pieces of data in parallel. The GPU is a natural fit for color space conversion.
+
+Why !openGL
+
+The downside is the process by which you get texture data into the GPU. Consider that for each frame you have to Load the texture data into memory (CPU operation) and then you have to Copy this texture data into the GPU (CPU operation). It is this Load/Copy that can make using openGL slower than alternatives.
+
+If you are playing low resolution videos then I suppose it's possible you won't see the speed difference because your CPU won't bottleneck. However, if you try with HD you will more than likely hit this bottleneck and notice a significant performance hit.
+
+The way this bottleneck has been traditionally worked around is by using Pixel Buffer Objects (allocating GPU memory to store texture Loads). Unfortunately GLES2 does not have Pixel Buffer Objects.
+
+Other Options
+
+For the above reasons, many have chosen to use software-decoding combined with available CPU extensions like NEON for color space conversion. An implementation of YUV 2 RGB for NEON exists here. The means by which you draw the frames, SDL vs openGL should not matter for RGB since you are copying the same number of pixels in both cases.
+
+You can determine if your target device supports NEON enhancements by running cat /proc/cpuinfo from adb shell and looking for NEON in the features output.
