@@ -1,0 +1,6 @@
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/CMakeFiles/rebuild_cache.dir
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/CMakeFiles/edit_cache.dir
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/CMakeFiles/demo.dir
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/math/CMakeFiles/rebuild_cache.dir
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/math/CMakeFiles/edit_cache.dir
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/math/CMakeFiles/MFun.dir

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/math/MFun.cc
+MFun.h
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/math/MFun.h
+
+/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/math/MFun.h
+
