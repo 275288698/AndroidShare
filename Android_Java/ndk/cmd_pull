@@ -1,1 +1,2 @@
 adb pull /sdcard/Android/data/com.pingan.live/cache/crash/
+adb pull /sdcard/pingan/com.pingan.xueyuan/log ~/Desktop/log
