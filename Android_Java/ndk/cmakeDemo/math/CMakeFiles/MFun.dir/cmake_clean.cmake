@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MFun.dir/MFun.cc.o"
   "libMFun.pdb"
-  "libMFun.a"
+  "libMFun.dylib"
 )
 
 # Per-language clean rules from dependency scanning.

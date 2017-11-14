@@ -1,2 +1,1 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libMFun.a  CMakeFiles/MFun.dir/MFun.cc.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libMFun.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -dynamiclib -Wl,-headerpad_max_install_names  -o libMFun.dylib -install_name /Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo/math/libMFun.dylib CMakeFiles/MFun.dir/MFun.cc.o 

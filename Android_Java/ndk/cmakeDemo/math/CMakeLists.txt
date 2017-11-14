@@ -1,7 +1,8 @@
 message(MFUN1)
 aux_source_directory(. DIR_SRCS)
 message(MFUN2)
-add_library(MFun ${DIR_SRCS})
+ADD_LIBRARY(MFun SHARED ${DIR_SRCS})
+#add_library(MFun shared ${DIR_SRCS})
 message(MFUN3)
 
 #/Users/yiqin/Documents/github/Android_Java/ndk/cmakeDemo
