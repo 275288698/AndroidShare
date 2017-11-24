@@ -1,0 +1,29 @@
+查看
+	＃git branch -a
+	＃git branch -r
+
+1.删除分支
+	＃git branch -D ［本地分支名］
+
+2.拉取远程分支并创建本地分支
+	2.1
+	//采用此种方法建立的本地分支会和远程分支建立映射关系。
+	＃git checkout -b [本地分支名] orgin/[远程分支名]
+	2.2
+	//采用此种方法建立的本地分支不会和远程分支建立映射关系。
+	git fetch origin [远程分支名]:[本地]
+
+3.分支映射
+
+	查看本地分支与远程分支的映射关系
+	git　branch -vv
+	
+	建立当前分支与远程分支的映射关系:
+	＃git branch -u origin/[远程分支名]
+	或者
+	＃git branch --set-upstream-to origin/[远程分支名]
+	
+	
+	
+4.撤销  本地分支与远程分支的映射关系
+	git branch --unset-upstream

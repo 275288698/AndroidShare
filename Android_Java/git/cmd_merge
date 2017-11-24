@@ -1,0 +1,15 @@
+	git fetch origin master:master
+	git merge origin/master
+
+
+
+     git pull . remotes/origin/master
+	
+	
+	二进制文件冲突解决
+	git checkout FILE --ours [ --theirs ]
+	
+$ git merge B  #试图将B分支合并到A分支上，会提示test.docx合并冲突  
+$ git checkout test.docx --ours #保留A分支（当前分支）上的改动  
+$ git add test.docx #提交改动后的文件  
+$ git commit -m "解决了test.docx上的冲突，保留了A分支改动" 
