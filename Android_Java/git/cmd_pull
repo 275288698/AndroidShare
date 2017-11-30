@@ -1,3 +1,10 @@
 git pull时出现冲突 放弃本地修改，使远程库内容强制覆盖本地代码
 git fetch --all //只是下载代码到本地，不进行合并操作
 git reset --hard origin/master  //把HEAD指向最新下载的版本
+
+
+
+git pull 
+== 
+git fetch upstream PALive:PALive
+git merge FETCH_HEAD

@@ -1,0 +1,19 @@
+创建附注Tag
+
+$ git tag -a v0.1.2 -m “0.1.2版本”
+
+
+给指定的commit打Tag
+打Tag不必要在head之上，也可在之前的版本上打，这需要你知道某个提交对象的校验和（通过git log获取）。
+补打Tag
+$ git tag -a v0.1.1 9fbc3d0
+
+
+Tag推送到服务器
+通常的git push不会将Tag对象提交到git服务器，我们需要进行显式的操作：
+
+$ git push origin v0.1.2 # 将v0.1.2 Tag提交到git服务器
+$ git push origin –-tags # 将本地所有Tag一次性提交到git服务器
+
+
+

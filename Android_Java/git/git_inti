@@ -1,0 +1,21 @@
+ Command line instructions
+ Git global setup
+	#git config --global user.name "易勤"
+	#git config --global user.email "yiqin295@pingan.com.cn"
+
+Create a new repository
+	#git clone http://pagit.paic.com.cn/YIQIN295/my-awesome-project.git
+	#cd my-awesome-project
+	#touch README.md
+	#git add README.md
+	#git commit -m "add README"
+	#git push -u origin master
+
+Existing folder or Git repository
+
+	#cd existing_folder
+	#git init
+	#git remote add origin http://pagit.paic.com.cn/YIQIN295/my-awesome-project.git
+	#git add .
+	#git commit
+	#git push -u origin master

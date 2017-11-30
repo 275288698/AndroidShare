@@ -24,6 +24,7 @@
  	
  	git push --force
  	git push --rebase
+ 	git push -u //建立远程分支，并建立对应关系
  	
 
 

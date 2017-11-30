@@ -1,0 +1,34 @@
+
+
+
+
+11-1  
+	 so库的架构过滤 <adb filter>
+	 framework/package/Music 等系统app源码
+	 
+	 增量更新 libBSPatch/bsdiff   www.daemonology.net/bsdiff/
+	 	libBSPatch/bsdiff depend on bzip2(哈夫曼算法)
+	 
+	 100w解决方案。 拆分 －－－ 合并
+	 增量更新，热修复，插件化
+11-2
+	windows
+	bsdiff  ＋bzip2  vs编译生成so
+11-3 
+	esc服务器
+	／bspatch
+	
+12-1
+	linux
+	bsdiff  ＋bzip2  编译生成so
+	bspatch  AS编译运行  校验md5
+12-2
+	C++ 语法 （命名空间，构造函数，this）
+12-3
+	C++ 语法（引用）
+13-1
+	C++ 语法（浅拷贝，深拷贝，拷贝构造函数！ 成员变量初始化）
+	浅拷贝＋成员变量析枸时的 heap 野指针错误
+		1。深拷贝	
+		2. 拷贝函数私有化
+	继承
