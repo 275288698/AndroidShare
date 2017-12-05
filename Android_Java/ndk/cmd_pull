@@ -1,2 +1,4 @@
 adb pull /sdcard/Android/data/com.pingan.live/cache/crash/
 adb pull /sdcard/pingan/com.pingan.xueyuan/log ~/Desktop/log
+
+获取系统crash log: adb shell dumpsys dropbox --print >>log.txt

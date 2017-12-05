@@ -31,4 +31,59 @@
 	浅拷贝＋成员变量析枸时的 heap 野指针错误
 		1。深拷贝	
 		2. 拷贝函数私有化
-	继承
+	
+13-2
+	继承，虚函数
+14-1
+	友元，类型转换，异常捕获，模版类
+
+14-2
+	linux 基本命令
+	tail 5 a.txt
+	head 5 a.txt
+	file a.txt
+	md5 a.txt
+	chmod 777 a.txt
+	chmod g/u/o+ r/w/x a.txt	
+
+	source 4.sh
+	. ./4.sh
+	
+15-1
+	＝＝＝＝＝＝＝＝＝ndk＝＝＝＝＝＝＝＝＝
+
+	#wget http://mirrors.neusoft.edu.cn/android/repository/**ndk**
+	#atp-get intall unzip
+	
+	//配置环境变量
+	#vim ~/.bashrc  
+	
+	编辑
+	 export NDKROOT=/ndk_build/android-ndk-r14b
+	 export PATH = $PATH:NDKROOT
+	
+	＃source ~/.bashrc
+	#ndk-build -v 
+	
+	＝＝＝＝＝＝＝＝＝jdk＝＝＝＝＝＝＝＝＝
+	#wget http//...jdk-linux.tar.gz
+	#tar xzf jdk-linux.tar.gz
+	
+	#wget http//...
+	
+15-2
+	Shell脚本命令
+	if 
+	case
+	while
+	
+	for in
+	
+	
+15-3
+	andfix tinker
+	
+	
+	
+	
+	
