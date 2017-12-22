@@ -1,0 +1,2 @@
+getprop dalvik.vm.stack-trace-file
+setprop dalvik.vm.stack-trace-file /tmp/stack-traces.txt
