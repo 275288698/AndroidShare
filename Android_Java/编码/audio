@@ -1,0 +1,11 @@
+1. 开源、音质好（目前认为是开源AAC编码器里音质最好的）
+2. 是开源，但是和ffmpeg的license可能不兼容
+3. 音质，顺序大概是libfdk_aac>libfaac>aac>libvo_aacenc
+
+
+
+频谱我一般就用adobe audition看，把波形视图调成频谱就可以了
+
+ ffmepg自己的aac最近是有提高 但要说你fdkaac强就错了 今年移除的是libfaac 去年移除了voaac和aacplus aac的第三方库只剩下fdkaaac 
+ http://trac.ffmpeg.org/wiki/Encode/AAC
+ 最下面有写For AACLC: libfdk_aac > Native FFmpeg AAC encoder (aac).

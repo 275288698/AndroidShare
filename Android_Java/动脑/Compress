@@ -1,0 +1,4 @@
+//        12-29 11:32:47.952 21975-21975/com.handsome.bitmapcompress E/yiqin: NDK压缩:2708ms   452k    1
+//        12-29 11:32:49.171 21975-21975/com.handsome.bitmapcompress E/yiqin: 质量压缩:1219ms   565k    1
+//        12-29 11:32:49.213 21975-21975/com.handsome.bitmapcompress E/yiqin: 尺寸压缩:42ms      238k   3
+//        12-29 11:32:49.500 21975-21975/com.handsome.bitmapcompress E/yiqin: 采样率压缩:287ms    196k   2
