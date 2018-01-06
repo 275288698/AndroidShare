@@ -1,0 +1,23 @@
+cd /Users/yiqin/Documents/github/Android_Java/ndk/backtrace & adb pull /data/tombstones ./yiqin1.txt
+
+
+1.
+ndk-stack -sym . -dump yiqin.txt
+
+	********** Crash dump: **********
+	Build fingerprint: 'HUAWEI/MLA-AL10/HWMLA:7.0/HUAWEIMLA-AL10/C00B352:user/release-keys'
+	pid: 14274, tid: 23850, name: Thread-10921  >>> com.pingan.xueyuan <<<
+	signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xc1518900
+	Stack frame #00 pc 00398900  [anon:libc_malloc:c1180000]
+	Stack frame #01 pc 0001af78  /data/app/com.pingan.xueyuan-1/lib/arm/librtmp.so 
+		(StartSend+164): Routine StartSend at 
+		/Users/yiqin/Documents/github/Android_Java/rtmp/rtmp/librtmp/rtmp_ios.c:154
+
+2.
+python stack.py --symbols-dir=.  yiqin.txt
+
+3.
+arm-linux-androideabi-addr2line -Cfe librtmp.so 0001af78
+
+4.
+arm-linux-androideabi-objdump -S librtmp.so > yiqin

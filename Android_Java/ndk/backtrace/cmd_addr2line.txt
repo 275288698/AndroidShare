@@ -1,0 +1,74 @@
+	SIGSEGV   SEGV_MAPERR     Address not mapped to object.
+              SEGV_ACCERR     Invalid permissions for mapped object.
+                               
+	SIGBUS    BUS_ADRALN      Invalid address alignment.
+              BUS_ADRERR      Nonexistent physical address.
+              BUS_OBJERR      Object-specific hardware error.
+ 
+ 275288698deMacBook-Pro:~ yiqin$ arm-linux-androideabi-addr2line -C -f -e ~/Desktop/librtmp.so 0001b3d0
+	speed_calculate
+	/Users/yiqin/Documents/rtmpsrc_others/rtmp/librtmp/rtmp_ios.c:387
+275288698deMacBook-Pro:~ yiqin$ arm-linux-androideabi-addr2line -C -f -e ~/Desktop/librtmp.so 0001adec
+	connectRtmp
+	/Users/yiqin/Documents/rtmpsrc_others/rtmp/librtmp/rtmp_ios.c:80
+275288698deMacBook-Pro:~ yiqin$ arm-linux-androideabi-addr2line -C -f -e ~/Desktop/librtmp.so 0001ad48
+	connectRtmp
+	/Users/yiqin/Documents/rtmpsrc_others/rtmp/librtmp/rtmp_ios.c:87
+              
+1.将ndk中的arm-linux-androideabi-addr2line可执行文件的路径加入配置文件~/.bashrc中，例如：
+export PATH=$PATH:~/dlna/android-ndk-r6b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin
+2.使配置生效：source ~/.bashrc
+3.使用工具。例如：arm-linux-androideabi-addr2line -C -f -e ~/workspace/DLNA/libs/armeabi/libctrlpt.so 0003deb4
+其中，0003deb4为堆栈信息中pc的值。
+android应用崩溃的调试方法
+有两种方法可以分析 crash 的堆栈信息
+1 google提供了一个python脚本，可以从
+http://code.google.com/p/android-ndk-stacktrace-analyzer/
+下载这个python脚本，然后使用 adb logcat -d > logfile 导出 crash 的log,
+使用 arm-eabi-objdump 位于build/prebuilt/linux-x86/arm-eabi-4.2.1/bin下面
+把so或exe转换成汇编代码，如：arm-eabi-objdump -S mylib.so > mylib.asm,
+使用脚本
+python parse_stack.py <asm-file> <logcat-file>
+2 直接使用NDK下面的arm-linux-androideabi-addr2line
+(D:\android-ndk-r8\toolchains\arm-linux-
+androideabi-4.4.3\prebuilt\windows\bin\arm-linux-androideabi-addr2line.exe)
+例如：arm-linux-androideabi-addr2line -C -f -e libxxx.so 0x#####(address)
+android调试工具addr2line使用补充
+使用addr2line追踪自有动态库(so文件)的bug, 补充:
+解决出现 ??:0 , 没法展示源代码行数的问题
+在Android.mk 文件中:
+Java代码
+LOCAL_CFLAGS
+:=
+-D__STDC_CONSTANT_MACROS
+-Wl,-Map=test.map
+-g
+补充2个编译参数 -Wl,-Map=test.map -g .
+增加gcc警告和调试标志
+arm-linux-androideabi-addr2line -C -f -e /项目目录/obj/local/armeabi/libfaa_jni.so 0024362e
+tip: 1,注意调试文件的位置在obj目录下,并非libs目录下生成的so文件
+2,0024362e 为出错的机制位置
+还有：
+在jni/目录下增加Application.mk 文件， 修改为debug 模式，进行调试 APP_OPTIM := debug
+
+
+目前 27.7M
+			 jar包   so库
+	播放库     31kb   18.7M
+	推流库     672kb  2.5M
+	腾讯IM	  2.2M   3.6M
+	
+优化
+腾讯		占用 5.8M，无优化空间
+推流库	占用 3.17M，可优化到 1.5～2M
+播放库	占用18.7M， 可优化  ？？？需要国雄看一下
+
+
+
+	
+
+
+
+
+
+
