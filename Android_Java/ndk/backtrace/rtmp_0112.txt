@@ -1,0 +1,21 @@
+--------- beginning of crash
+01-12 14:46:02.299 29819   380 F libc    : Fatal signal 11 (SIGSEGV), code 2, fault addr 0xb8b1f180 in tid 380 (Thread-5044)
+01-12 14:46:02.709  2013  2013 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+01-12 14:46:02.709  2013  2013 F DEBUG   : Build fingerprint: 'Xiaomi/gemini/gemini:7.0/NRD90M/V9.1.4.0.NAACNEI:user/release-keys'
+01-12 14:46:02.709  2013  2013 F DEBUG   : Revision: '0'
+01-12 14:46:02.710  2013  2013 F DEBUG   : ABI: 'arm'
+01-12 14:46:02.710  2013  2013 F DEBUG   : pid: 29819, tid: 380, name: Thread-5044  >>> com.pingan.xueyuan <<<
+01-12 14:46:02.711  2013  2013 F DEBUG   : signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr 0xb8b1f180
+01-12 14:46:02.711  2013  2013 F DEBUG   :     r0 00000005  r1 00000001  r2 00000000  r3 b8b1f180
+01-12 14:46:02.711  2013  2013 F DEBUG   :     r4 b8b1f180  r5 00000001  r6 c3a94740  r7 c3a94764
+01-12 14:46:02.711  2013  2013 F DEBUG   :     r8 b8b1f384  r9 b8b1f180  sl ce39efcc  fp 0000000b
+01-12 14:46:02.711  2013  2013 F DEBUG   :     ip ce3a7e9c  sp caa158e8  lr ce39ef7c  pc b8b1f180  cpsr 800f0010
+01-12 14:46:02.715  2013  2013 F DEBUG   : 
+01-12 14:46:02.715  2013  2013 F DEBUG   : backtrace:
+01-12 14:46:02.715  2013  2013 F DEBUG   :     #00 pc 0041f180  [anon:libc_malloc:b8700000]
+01-12 14:46:02.716  2013  2013 F DEBUG   :     #01 pc 0001af78  /data/app/com.pingan.xueyuan-1/lib/arm/librtmp.so (StartSend+164)
+
+
+Stack frame #00 pc 0041f180  [anon:libc_malloc:b8700000]
+Stack frame #01 pc 0001af78  /data/app/com.pingan.xueyuan-1/lib/arm/librtmp.so (StartSend+164):
+ Routine StartSend at /Users/yiqin/Documents/github/Android_Java/rtmp/rtmp/librtmp/rtmp_ios.c:154
