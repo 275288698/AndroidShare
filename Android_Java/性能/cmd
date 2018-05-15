@@ -1,0 +1,11 @@
+adb shell am start -W com.pingan.hrxapp_dev/com.pingan.hrxapp.startup.LoadingActivity
+
+kitkat 4.4
+adb locat *|grep ActivityManager
+
+二、调用Activity的reportFullyDrawn()方法
+
+
+三
+$ adb shell screenrecord --bugreport /sdcard/launch.mp4
+ $ adb pull /sdcard/launch.mp4
