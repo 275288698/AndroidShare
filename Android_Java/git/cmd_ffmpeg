@@ -1,0 +1,12 @@
+
+common.mak:159: *** missing separator. Stop.
+原创 2016年11月18日 14:07:48 1045
+编译ffmpeg 时配置完执行make 遇到common.mak:159: *** missing separator.  Stop.
+
+解决方法
+
+运行
+Git config --global core.autocrlf false
+#然后运行下面的命令删除ffmpeg代码，并重新获取一下即可
+git rm --cached -r .
+git reset --hard
