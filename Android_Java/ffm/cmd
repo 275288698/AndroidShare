@@ -1,1 +1,0 @@
-ffmpeg -h full | grep 'analyzeduration\|probesize'
